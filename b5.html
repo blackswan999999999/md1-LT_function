@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b5</title>
+</head>
+<body>
+<h1>Tính giai thừa</h1>
+<input type="number" id="s1" onkeyup="calculate()"/> RESULT:
+<span id="s2"></span>
+</body>
+<script>
+    function f(numb) {
+        let t = 1;
+        for (let i = numb; i > 0; i--) {
+            t *= i;
+        }
+        return t;
+    }
+
+    function calculate() {
+        let input = document.getElementById('s1').value;
+        let result = `${f(input)}`;
+        document.getElementById('s2').innerHTML = result;
+        return;
+    }
+    //recursive - đệ quy
+    // function giaiThua(num) {
+    //     if (num > 0) {
+    //         return num * giaiThua(num - 1);
+    //     }
+    //     return 1
+    // }
+</script>
+</html>

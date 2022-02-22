@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="s1" onchange="Calc()"/> RESULT:
+<span id="s2"></span>
+
+
+</body>
+<script>
+
+
+  function Calc(){
+    let input=document.getElementById('s1').value;
+    if (isNaN(input)){
+      //  mặc định khi kiểm tra giá trị boolean True
+      document.getElementById('s2').innerHTML=`${input} không giá trị số`;
+    }else {
+      //  isNaN trả về false
+      document.getElementById('s2').innerHTML=`${input} là giá trị số`;
+    }
+  }
+
+
+</script>
+</html>

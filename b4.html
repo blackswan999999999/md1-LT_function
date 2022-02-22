@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b4</title>
+</head>
+<body>
+<script>
+    function dien_tich_hinh_tron(R) {
+        return (R * R * Math.PI).toFixed(3)
+    }
+    //tofixed(n) làm tròn đến chữ số thập phân thứ n.         https://www.w3schools.com/jsref/jsref_tofixed.asp
+
+    function chu_vi_hinh_tron(R) {
+        return (R * 2 * Math.PI).toFixed(3)
+    }
+
+    console.log(`Diện tích hình tròn có bán kính = 5 là ${dien_tich_hinh_tron(5)}`);
+    console.log(`Chu vi hình tròn có bán kính = 5 là ${chu_vi_hinh_tron(5)}`);
+//    dọc  tí ES6 template ;')
+
+</script>
+</body>
+</html>
