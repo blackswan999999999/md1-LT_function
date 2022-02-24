@@ -8,42 +8,24 @@
 
 </body>
 <script>
-    function find() {
-        let k = prompt(' nhập giá trị bạn cần tìm');
-        let num = [-3, 5, 4, 6, 8, 10, 12, 10];
-        let text = 0;
-        for (let j = 0; j < num.length; j++) {
-            text = num[j]
-            console.log('giá trị     '+text+'  tại chỉ số    '+j)
-        }
-        for (let i = 0; i < num.length; i++) {
 
-            if (k == num[i]) {
-                alert(num[i] + ' có trong mảng và nằm ở vị trí ' + i);
-                console.log('giá trị '+num[i]+ '  nằm ở vị trí=====' +i);
-            }
-            if (i==num.length-1 && k!=num[i]) {
-                alert(' không còn giá trị cần tìm nào nằm trong mảng');
-                break;
+    let arr = [5, 10, 'b', 'b', 10];
+
+    function findKwInArr(arr, kw) {
+        if (kw == null ||  kw== undefined) return;
+        let arr2 = [];
+        let count = -1;
+        for (let i = 0; i < arr.length; i++) {
+            if (kw === arr[i]) {
+                arr2.push(kw);
+                count = arr2.length
             }
         }
+        return count;
     }
 
-    find();
-    // let arrbai10 = ['a', 'a', 'b', 'c', '1', '2', '1'];
-    //
-    // function findCharsInArr(arr, char) {
-    //     if (char == null || char == undefined) return;
-    //     let store = [];
-    //     let count = -1;
-    //     for (let i = 0; i < arr.length; i++) {
-    //         if (char === arr[i]) {
-    //             store.push(char);
-    //             count = store.length
-    //  kết hợp đếm + mảng
-    //         }
-    //     }
-    //     return count;
-    // }
+    console.log(findKwInArr(arr,10)); //2
+    console.log(findKwInArr(arr,'b'));//2
+    console.log(findKwInArr(arr,4));//-1
 </script>
 </html>
